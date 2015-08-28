@@ -34,7 +34,11 @@ body{
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
   display:block;
-    background:black;
+}
+
+article,aside,details,figcaption,figure,
+footer,hgroup,menu,section {
+    background: black;
 }
 
 #main{
@@ -259,8 +263,7 @@ h4 a {
 #header {
   width: 100%;
   position: relative;
-  border-bottom: 1px solid #EEE;
-  margin-bottom: -55px;
+  margin-bottom: -50px;
 }
 
 #logo{
@@ -305,7 +308,7 @@ h4 a {
   background-color:rgba(240,240,240,0.9);  
   z-index: 6;   
   border-bottom: 1px solid #DDDDDD;    
-  height: 55px;
+  height: 56px;
 }
 
 #navigation a {
@@ -576,6 +579,10 @@ li.sfHover > a > .sf-sub-indicator {
   position: relative;
   width: 100&;
   margin-bottom: 40px;
+}
+
+#flexslider-1 {
+  border: 0;
 }
 
 #home-quote  {
