@@ -5,6 +5,7 @@ base theme = business
 engine = phptemplate
 stylesheets[all][] = style.css
 stylesheets[all][] = color/colors.css
+stylesheets[all][] = flexslider.css
 regions[sidebar_first]  = First Sidebar
 regions[header]         = Header
 regions[homequotes]     = Home Quotes
