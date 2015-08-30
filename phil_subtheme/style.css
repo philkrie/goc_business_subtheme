@@ -219,7 +219,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: #000;
+  color: #FFF;
   line-height: 1.5em;
   font-weight: normal;
   text-transform: capitalize;
@@ -582,12 +582,17 @@ li.sfHover > a > .sf-sub-indicator {
 }
 
 #flexslider-1 {
-  border: 0;
+  background: black;
+}
+
+#flexslider-1 a{
+  color:white;
 }
 
 #home-quote  {
     background: black;
     color:white;
+    border: 0;
 }
 
 #home-quote  h2{
@@ -1143,3 +1148,4 @@ h3.comment-title a{
 #forum .name a{ 
   font-size: 16px;
 }
+
