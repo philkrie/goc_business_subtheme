@@ -33,8 +33,8 @@
 		  			
 			return this.each(function(){
 				var $this = $(this),
-					w = $this.width() ? $this.width() : settings.width,
-					h = $this.height() ? $this.height() : settings.height,
+					w = '33.33vw',
+					h = '33.33vw',
 					overlay_w = settings.overlay_width ? settings.overlay_width : w,
 					overlay_h = settings.overlay_height ? settings.overlay_height : h,
 					$data = $this.next(settings.data_selector);
@@ -74,7 +74,7 @@
 					if (settings.overlay_y_position=='top') { 
 						ch_hover_css.top = 0;
 					} else if (settings.overlay_y_position=='bottom') {
-						ch_hover_css.top = (h-overlay_h)+'px';
+						ch_hover_css.top = "0%";
 					} else {
 						ch_hover_css.top = (h/2 - overlay_h/2)+'px';
 					}
@@ -87,17 +87,16 @@
 						var initial_css = {};
 						
 						if (settings.slide_direction=='top') {
-							initial_css = { top:('-'+overlay_h+'px') }; 
+							initial_css = { top:(overlay_h) }; 
 						}
 						if (settings.slide_direction=='bottom') {
-                            h = h*.8;
-							initial_css = { top:h+'px' };
+                            initial_css = { top: '85%'  };
 						}
 						if (settings.slide_direction=='left') {
-							initial_css = { left:('-'+overlay_w+'px') };
+							initial_css = { left:(overlay_w) };
 						}
 						if (settings.slide_direction=='right') {
-							initial_css = { left:w+'px' };
+							initial_css = { left:w };
 						}
 									
 						$ch_hover.css('z-index',settings.zindex+1).css(initial_css);
