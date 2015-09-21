@@ -132,29 +132,9 @@
   <div id="home-quote"> <?php print render($page['homequotes']); ?></div>
   <?php endif; ?>
   
-  <?php if ($page['home_high1'] || $page['home_high2'] || $page['home_high3'] || $page['home_high4']
-           || $page['home_high5'] || $page['home_high6']): ?>
+  <?php if ($page['highlights']): ?>
     <div id="home-highlights" class="clearfix">
-     <?php if ($page['home_high1']): ?>
-     <div class="home-highlight-box"><?php print render($page['home_high1']); ?></div>
-     <?php endif; ?>
-     <?php if ($page['home_high2']): ?>
-     <div class="home-highlight-box"><?php print render($page['home_high2']); ?></div>
-     <?php endif; ?>
-     <?php if ($page['home_high3']): ?>
-     <div class="home-highlight-box remove-margin"><?php print render($page['home_high3']); ?></div>
-     <?php endif; ?>
-    </div>
-    <div id="home-highlights" class="clearfix">
-     <?php if ($page['home_high4']): ?>
-     <div class="home-highlight-box"><?php print render($page['home_high4']); ?></div>
-     <?php endif; ?>
-     <?php if ($page['home_high5']): ?>
-     <div class="home-highlight-box"><?php print render($page['home_high5']); ?></div>
-     <?php endif; ?>
-     <?php if ($page['home_high6']): ?>
-     <div class="home-highlight-box remove-margin"><?php print render($page['home_high6']); ?></div>
-     <?php endif; ?>
+     <div><?php print render($page['highlights']); ?></div>
     </div>
   <?php endif; ?>
   

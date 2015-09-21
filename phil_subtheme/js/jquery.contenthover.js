@@ -31,13 +31,23 @@
 			},  
 			settings = $.extend({}, defaults, options);  
 		  			
+            var width = $(window).width();
 			return this.each(function(){
-				var $this = $(this),
-					w = '33.33vw',
-					h = '33.33vw',
-					overlay_w = settings.overlay_width ? settings.overlay_width : w,
-					overlay_h = settings.overlay_height ? settings.overlay_height : h,
-					$data = $this.next(settings.data_selector);
+                if(width > 850){
+                    var $this = $(this),
+                        w = '33.33vw',
+                        h = '33.33vw',
+                        overlay_w = settings.overlay_width ? settings.overlay_width : w,
+                        overlay_h = settings.overlay_height ? settings.overlay_height : h,
+                        $data = $this.next(settings.data_selector);
+                } else {
+                    var $this = $(this),
+                        w = '100vw',
+                        h = '16.667vh',
+                        overlay_w = settings.overlay_width ? settings.overlay_width : w,
+                        overlay_h = settings.overlay_height ? settings.overlay_height : h,
+                        $data = $this.next(settings.data_selector);
+                }
 					
 				if ($data.length) {
 					

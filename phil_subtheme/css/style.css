@@ -206,7 +206,7 @@ em {
   padding: 0;
   background: black;
   margin: 0 auto;
-  border-top: 3px solid #B81007;
+  border-top: 3px solid #5fa128;
 }
 #main {
   padding: 30px 0 0;
@@ -393,12 +393,12 @@ h4 a {
 #main-menu .menu a:hover,
 #main-menu .menu a:active {
   color: #FFF;
-  background: #B81007;
+  background: #5fa128;
 }
 
 #main-menu .menu a.active {
   color: #FFF !important;
-  background: #B81007;
+  background: #5fa128;
 }
 
 #main-menu .menu a.active-trail{
@@ -409,7 +409,7 @@ h4 a {
 #main-menu .menu ul a:focus,
 #main-menu .menu ul a:hover,
 #main-menu .menu ul a:active {
-  background: #B81007;
+  background: #5fa128;
 }
 
 #main-menu .menu li ul {
@@ -521,39 +521,7 @@ li.sfHover > a > .sf-sub-indicator {
 /*-------------------------------------------*
 /* Home Highlights
 /*-------------------------------------------*/
-.home-highlight-box {
-  float: left;
-  width: 33.33vw;
-  height: 33.33vw;
-  text-align: center;
-  overflow:hidden;
 
-}
-
-.home-highlight-box h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.home-highlight-box p {
-    margin:0;
-}
-
-.home-highlight-box img {
-  width: auto;
-  height:33.33vw;
-
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-
-.home-highlight-box:hover img {
-    opacity: 0.7;
-}
 
 #home-highlights{
 }
@@ -587,9 +555,9 @@ li.sfHover > a > .sf-sub-indicator {
 
 .footer-box-left {
   float: left;
-  width: 215px;
+  width: 25vw;
   background: black;
-      color:white;
+  color:white;
 
 }
 
@@ -1314,12 +1282,16 @@ span.text-content span a:hover {
 /* JQUERY CONTENT HOVER OVERLAYS
 /*-------------------------------------------*/
 
-.image > div > img {
+.image > img {
     width: 33.33vw;
 }
 
+#block-views-highlights-block > h2 {
+    display:none;
+}
+
 .contenthover { padding:20px 20px 10px 20px; }
-.contenthover, .contenthover h3, contenthover a { color:#fff; }
+.contenthover, .contenthover h3 a, contenthover a { color:#FFF; }
 .contenthover h3, .contenthover p { margin:0 0 10px 0; line-height:1.4em; padding:0;}
 .contenthover h3{text-transform: uppercase}
 .contenthover a.mybutton { display:block; float:left; padding:5px 10px; background:#3c9632; color:#fff; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
