@@ -25,7 +25,8 @@
 				zindex: 2,			// The base z-index value
 				wrapper_class: 'ch_wrapper', 	// CSS class to add to the wrapper
 				normal_class: 'ch_normal',  	// CSS class to add to the 'normal' element
-				hover_class: 'ch_hover',  	// CSS class to add to the 'hover' element
+				hover_class: 'ch_hover',    // CSS class to add to the 'hover' element
+                helper_class: 'ch_helper',
 				onshow: function(){}, 		// Callback function when the 'hover' element is shown
 				onhide: function(){} 		// Callback function when the 'hover' element is hidden
 			},  
@@ -58,8 +59,10 @@
 					var $ch_normal = $('<div>').addClass(settings.normal_class).css({ 'width':w, 'height':h, 'position':'absolute', 'z-index':settings.zindex }).appendTo($ch_wrapper);
 					$this.clone().appendTo($ch_normal);
 					$this.hide();
-
-					var $ch_hover = $('<div>').addClass(settings.hover_class).css({ 'width':overlay_w, 'height':overlay_h, 'position':'absolute', 'z-index':settings.zindex-1 }).appendTo($ch_wrapper);
+                    
+                    var $ch_helper = $('<div>').addClass(settings.helper_class).css({ 'width':w, 'height':h, 'top':'100%', 'position':'absolute', 'visibility':'hidden'}).appendTo($ch_wrapper);
+                    
+					var $ch_hover = $('<div>').addClass(settings.hover_class).css({ 'width':overlay_w, 'height':overlay_h, 'position':'absolute', 'z-index':settings.zindex-1 }).appendTo($ch_helper);
 					$data.clone().show().appendTo($ch_hover);
 					
 					var ch_hover_css = {};
@@ -84,7 +87,7 @@
 					if (settings.overlay_y_position=='top') { 
 						ch_hover_css.top = 0;
 					} else if (settings.overlay_y_position=='bottom') {
-						ch_hover_css.top = "0%";
+						ch_hover_css.bottom = "100%";
 					} else {
 						ch_hover_css.top = (h/2 - overlay_h/2)+'px';
 					}
@@ -100,7 +103,7 @@
 							initial_css = { top:(overlay_h) }; 
 						}
 						if (settings.slide_direction=='bottom') {
-                            initial_css = { top: '85%'  };
+                            initial_css = { bottom: '20px'  };
 						}
 						if (settings.slide_direction=='left') {
 							initial_css = { left:(overlay_w) };
