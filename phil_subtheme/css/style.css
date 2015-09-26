@@ -589,26 +589,37 @@ li.sfHover > a > .sf-sub-indicator {
 /*-------------------------------------------*
 /* Front-page Slider 
 /*-------------------------------------------*/
-#slider {
-  position: relative;
-  width: 100&;
-  margin-bottom: 40px;
+#header-image img{
+    position:absolute;
+    width: 100%;
+    height:auto;
 }
 
-#flexslider-1 {
-  background: black;
+#header-image .gabon_logo img{
+    position:absolute;
+    margin:0;
+    left: 50%;
+    margin-right:50%;
+    transform: translate(-50%, 60%);
+    height: 200px;
+    width: auto;
 }
 
-#flexslider-1 h2{
-    color:white;
-    text-align: center;
+#header-image{
+    width: 100%;
+    height: 400px;
+    overflow:hidden;
+    position: relative;
 }
 
 
-#flexslider-1 a{
-  color:white;
+@media (max-width:850px){
+    #header-image img{
+        width: 850px;
+        height:auto;
+        position: absolute;
+    }
 }
-
 
 #home-quote  {
     background: black;
@@ -652,9 +663,13 @@ li.sfHover > a > .sf-sub-indicator {
     
 }
 
-@media (max-width: 850px){
+@media (max-width: 950px){
+    #home-quote{
+        margin-bottom: 100px;
+    }
+    
     #home-quote #quote{float: none;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         float:none;
     }
@@ -666,6 +681,7 @@ li.sfHover > a > .sf-sub-indicator {
         width: 50%;
         float:none;
     }
+
 }
 
 .main_view {
