@@ -403,7 +403,7 @@ h4 a {
 
 #main-menu .menu a.active-trail{
   color: #FFF !important;
-  background: #C00;
+  background: #5fa128;
 }
 
 #main-menu .menu ul a:focus,
@@ -430,7 +430,7 @@ li.sfHover {
 }
 
 #main-menu .menu ul a {
-  padding: .75em 1.2em;
+  padding: .75em 1.2em
 }
 
 /*** arrows **/
@@ -438,6 +438,24 @@ li.sfHover {
   padding-right: 2.25em;
   min-width: 1px; /* trigger IE7 hasLayout so spans position accurately */
 }
+
+.first.leaf > a{
+    display: inline-block;
+    text-indent: -9999em;
+    background-image: url("../GO_G_Small2.png");
+    background-repeat: no-repeat;
+    width: 45px;
+}
+
+.first.leaf > a:hover,
+.first.leaf> a:focus,
+.first.leaf> a:active,
+.first.leaf > a.active{
+    background: transparent !important;
+    background-image: url("../GO_G_Small2.png") !important;
+    background-repeat: no-repeat !important;    
+}
+
 .sf-sub-indicator {
   position: absolute;
   display: block;
@@ -1316,4 +1334,15 @@ span.text-content span a:hover {
 .contenthover h3{text-transform: uppercase}
 .contenthover a.mybutton { display:block; float:left; padding:5px 10px; background:#3c9632; color:#fff; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
 .contenthover a.mybutton:hover { background:#34742d }
+
+
+/*-------------------------------------------*
+/* UO BANNER CHANGES
+/*-------------------------------------------*/
+@media (max-width: 768px){
+
+    #navigation{
+        top:42px;
+    }
+}
 

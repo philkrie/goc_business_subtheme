@@ -25,30 +25,19 @@
 				zindex: 2,			// The base z-index value
 				wrapper_class: 'ch_wrapper', 	// CSS class to add to the wrapper
 				normal_class: 'ch_normal',  	// CSS class to add to the 'normal' element
-				hover_class: 'ch_hover',    // CSS class to add to the 'hover' element
-                helper_class: 'ch_helper',
+				hover_class: 'ch_hover',  	// CSS class to add to the 'hover' element
 				onshow: function(){}, 		// Callback function when the 'hover' element is shown
 				onhide: function(){} 		// Callback function when the 'hover' element is hidden
 			},  
 			settings = $.extend({}, defaults, options);  
 		  			
-            var width = $(window).width();
 			return this.each(function(){
-                if(width > 850){
-                    var $this = $(this),
-                        w = '33.33vw',
-                        h = '33.33vw',
-                        overlay_w = settings.overlay_width ? settings.overlay_width : w,
-                        overlay_h = settings.overlay_height ? settings.overlay_height : h,
-                        $data = $this.next(settings.data_selector);
-                } else {
-                    var $this = $(this),
-                        w = '100vw',
-                        h = '16.667vh',
-                        overlay_w = settings.overlay_width ? settings.overlay_width : w,
-                        overlay_h = settings.overlay_height ? settings.overlay_height : h,
-                        $data = $this.next(settings.data_selector);
-                }
+				var $this = $(this),
+					w = '33.33vw',
+                    h = '33.33vw',
+					overlay_w = settings.overlay_width ? settings.overlay_width : w,
+					overlay_h = settings.overlay_height ? settings.overlay_height : h,
+					$data = $this.next(settings.data_selector);
 					
 				if ($data.length) {
 					
@@ -59,10 +48,8 @@
 					var $ch_normal = $('<div>').addClass(settings.normal_class).css({ 'width':w, 'height':h, 'position':'absolute', 'z-index':settings.zindex }).appendTo($ch_wrapper);
 					$this.clone().appendTo($ch_normal);
 					$this.hide();
-                    
-                    var $ch_helper = $('<div>').addClass(settings.helper_class).css({ 'width':w, 'height':h, 'top':'100%', 'position':'absolute', 'visibility':'hidden'}).appendTo($ch_wrapper);
-                    
-					var $ch_hover = $('<div>').addClass(settings.hover_class).css({ 'width':overlay_w, 'height':overlay_h, 'position':'absolute', 'z-index':settings.zindex-1 }).appendTo($ch_helper);
+
+					var $ch_hover = $('<div>').addClass(settings.hover_class).css({ 'width':overlay_w, 'height':overlay_h, 'position':'absolute', 'z-index':settings.zindex-1 }).appendTo($ch_wrapper);
 					$data.clone().show().appendTo($ch_hover);
 					
 					var ch_hover_css = {};
@@ -85,9 +72,9 @@
 					
 					
 					if (settings.overlay_y_position=='top') { 
-						ch_hover_css.top = 0;
+						ch_hover_css.top = '33.33vw';
 					} else if (settings.overlay_y_position=='bottom') {
-						ch_hover_css.bottom = "100%";
+						ch_hover_css.top = '0%';
 					} else {
 						ch_hover_css.top = (h/2 - overlay_h/2)+'px';
 					}
@@ -100,16 +87,16 @@
 						var initial_css = {};
 						
 						if (settings.slide_direction=='top') {
-							initial_css = { top:(overlay_h) }; 
+							initial_css = { top:('-'+overlay_h+'px') }; 
 						}
 						if (settings.slide_direction=='bottom') {
-                            initial_css = { bottom: '20px'  };
+							initial_css = { top:'100%' };
 						}
 						if (settings.slide_direction=='left') {
-							initial_css = { left:(overlay_w) };
+							initial_css = { left:('-'+overlay_w+'px') };
 						}
 						if (settings.slide_direction=='right') {
-							initial_css = { left:w };
+							initial_css = { left:w+'px' };
 						}
 									
 						$ch_hover.css('z-index',settings.zindex+1).css(initial_css);
