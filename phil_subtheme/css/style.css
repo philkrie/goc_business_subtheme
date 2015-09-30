@@ -206,7 +206,7 @@ em {
   padding: 0;
   background: black;
   margin: 0 auto;
-  border-top: 3px solid #5fa128;
+  border-style: none;
 }
 #main {
   padding: 30px 0 0;
@@ -262,8 +262,9 @@ h4 a {
 /*-------------------------------------------*/
 #header {
   width: 100%;
-  position: relative;
+  position: absolute;
   margin-bottom: -50px;
+  
 }
 
 #logo{
@@ -307,7 +308,6 @@ h4 a {
   top: 0px;
   background-color:rgba(240,240,240,0.9);  
   z-index: 6;   
-  border-bottom: 1px solid #DDDDDD;    
   height: 56px;
 }
 
@@ -383,6 +383,7 @@ h4 a {
   color: #666;
   padding: 1.5em 15px;
   text-decoration: none;
+  margin-top: 2px;
 }
 
 #main-menu .menu a.active {
@@ -399,6 +400,7 @@ h4 a {
 #main-menu .menu a.active {
   color: #FFF !important;
   background: #5fa128;
+    margin-top:2px;
 }
 
 #main-menu .menu a.active-trail{
@@ -445,6 +447,7 @@ li.sfHover {
     background-image: url("../GO_G_Small2.png");
     background-repeat: no-repeat;
     width: 45px;
+    margin-top: 2px;
 }
 
 .first.leaf > a:hover,
@@ -629,6 +632,7 @@ li.sfHover > a > .sf-sub-indicator {
     height: 400px;
     overflow:hidden;
     position: relative;
+    top: -5px;
 }
 
 
@@ -1346,3 +1350,12 @@ span.text-content span a:hover {
     }
 }
 
+#uobanner-links{
+    line-height: 3em;
+}
+
+@media (max-width: 768px){
+    #uobanner-logobox img{
+        height: 100%;
+    }
+}
