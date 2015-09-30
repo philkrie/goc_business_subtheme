@@ -1327,6 +1327,48 @@ span.text-content span a:hover {
     overflow-x: hidden;
 }
 
+.ch_element{
+    width:33.33vw;
+    height:33.33vw;
+    position:relative; 
+    overflow:hidden;
+}
+
+.ch_wrapper{
+    width:33.33vw;
+    height:33.33vw;
+    position:relative; 
+    overflow:hidden;
+}
+
+.ch_normal{
+    width:33.33vw;
+    height:33.33vw;
+    position:absolute;
+    z-index:2 
+}
+
+.ch_hover{
+    width:33.33vw;
+    height:33.33vw;
+    position:absolute;
+    z-index:1 
+}
+
+
+@media(max-width: 768px){
+    .image img {
+        width: 100vw;
+        height: auto;
+        overflow-y: hidden;
+    }
+    
+    .ch_wrapper, .ch_normal, .ch_hover{
+        width: 100vw;
+        height: 16.67vw;
+    }
+}
+
 #block-views-highlights-block > h2 {
     display:none;
 }
