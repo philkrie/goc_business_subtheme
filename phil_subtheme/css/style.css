@@ -1321,10 +1321,32 @@ span.text-content span a:hover {
 /* JQUERY CONTENT HOVER OVERLAYS
 /*-------------------------------------------*/
 
+.image{
+    width: 33.33vw;
+    height: 33.33vw;
+    position: relative;
+}
+
 .image img {
     width: auto;
     height: 33.33vw;
     overflow-x: hidden;
+}
+
+.image > h3 {
+    width: 33.33vw;
+    height: 20px;
+    color: white;
+    top: 30px;
+    position: absolute;
+    z-index: 999;
+}
+
+
+.image > h3 a{
+    width: 33.33vw;
+    height: 20px;
+    color: white;
 }
 
 .ch_element{
@@ -1352,9 +1374,15 @@ span.text-content span a:hover {
     width:33.33vw;
     height:33.33vw;
     position:absolute;
-    z-index:1 
+    z-index:1;
 }
 
+
+@media(min-width: 1200px){
+    .ch_hover{
+        top: 90%;
+    }
+}
 
 @media(max-width: 768px){
     .image img {
@@ -1363,7 +1391,7 @@ span.text-content span a:hover {
         overflow-y: hidden;
     }
     
-    .ch_wrapper, .ch_normal, .ch_hover{
+    .ch_wrapper, .ch_normal, .ch_hover, .image{
         width: 100vw;
         height: 16.67vw;
     }

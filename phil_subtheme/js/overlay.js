@@ -7,4 +7,6 @@
             overlay_opacity: 0.8
             });
         });
+    
+    
 })(jQuery);

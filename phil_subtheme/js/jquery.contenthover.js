@@ -5,6 +5,11 @@
  * Copyright 2011 by Nikos Tsaganos
  * http://www.backslash.gr/
  */
+
+
+/*Global variable modified in other js*/
+var initial_css = {};
+
 (function($){  
 	var methods = {
 		init : function(options) {
@@ -84,13 +89,12 @@
 					// slide effect
 					if (settings.effect=='slide'){
 			
-						var initial_css = {};
 						
 						if (settings.slide_direction=='top') {
 							initial_css = { top:('-'+overlay_h+'px') }; 
 						}
 						if (settings.slide_direction=='bottom') {
-							initial_css = { top:'100%' };
+							initial_css = { top:'85%' };
 						}
 						if (settings.slide_direction=='left') {
 							initial_css = { left:('-'+overlay_w+'px') };
@@ -160,4 +164,12 @@
 		}  
 	}; 
 	
+    $(window).resize(function(){
+        var width = $(window).width();
+        width = width / 3;
+        width = width - 55;
+        initial_css = { top: width + 'px' };
+        $ch_hover.stop(true, true).animate(initial_css, settings.slide_speed, settings.onhide());
+    });
+    
 })(jQuery);  
