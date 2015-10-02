@@ -113,9 +113,17 @@
 						
                         $(window).resize(function(){
                             var width = $(window).width();
-                            width = width / 3;
-                            width = width - 55;
-                            initial_css = { top: width + 'px' };
+                            var height = $(window).height();
+                            if(width > 768){
+                                width = width / 3;
+                                width = width - 55;
+                                initial_css = { top: width + 'px' };
+                            } else {
+                                height = height/4;
+                                height = height - 55;
+                                initial_css = { top: height + 'px' };
+                            }
+                            
                             $ch_hover.css('z-index',settings.zindex+1).css(initial_css);
                         });
 											

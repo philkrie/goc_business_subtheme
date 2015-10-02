@@ -672,7 +672,7 @@ li.sfHover > a > .sf-sub-indicator {
 }
 
 #home-quote #big-button{
-    border: 10px solid white;
+    border: 6px solid white;
     padding: 8px;
     float: left;
     margin-left: 5vw;
@@ -682,7 +682,7 @@ li.sfHover > a > .sf-sub-indicator {
 }
 
 #home-quote #big-button:hover{
-    background: green;
+    background: #4E9634;
     
 }
 
@@ -1378,11 +1378,6 @@ span.text-content span a:hover {
 }
 
 
-@media(min-width: 1200px){
-    .ch_hover{
-        top: 90%;
-    }
-}
 
 @media(max-width: 768px){
     .image img {
@@ -1393,7 +1388,7 @@ span.text-content span a:hover {
     
     .ch_wrapper, .ch_normal, .ch_hover, .image{
         width: 100vw;
-        height: 16.67vw;
+        height: 25vh;
     }
 }
 
