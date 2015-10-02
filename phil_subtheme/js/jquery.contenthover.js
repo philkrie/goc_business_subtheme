@@ -8,7 +8,7 @@
 
 
 /*Global variable modified in other js*/
-var initial_css = {};
+            var initial_css = {};
 
 (function($){  
 	var methods = {
@@ -36,6 +36,7 @@ var initial_css = {};
 			},  
 			settings = $.extend({}, defaults, options);  
 		  			
+            
 			return this.each(function(){
 				var $this = $(this),
 					w = '33.33vw',
@@ -54,7 +55,7 @@ var initial_css = {};
 					$this.clone().appendTo($ch_normal);
 					$this.hide();
 
-					var $ch_hover = $('<div>').addClass(settings.hover_class).appendTo($ch_wrapper);
+				    var $ch_hover = $('<div>').addClass(settings.hover_class).appendTo($ch_wrapper);
 					$data.clone().show().appendTo($ch_hover);
 					
 					var ch_hover_css = {};
@@ -110,6 +111,13 @@ var initial_css = {};
 							$ch_hover.stop(true, true).animate(initial_css, settings.slide_speed, settings.onhide());
 						});
 						
+                        $(window).resize(function(){
+                            var width = $(window).width();
+                            width = width / 3;
+                            width = width - 55;
+                            initial_css = { top: width + 'px' };
+                            $ch_hover.css('z-index',settings.zindex+1).css(initial_css);
+                        });
 											
 					// fade effect
 					} else if (settings.effect=='fade') {
@@ -164,12 +172,6 @@ var initial_css = {};
 		}  
 	}; 
 	
-    $(window).resize(function(){
-        var width = $(window).width();
-        width = width / 3;
-        width = width - 55;
-        initial_css = { top: width + 'px' };
-        $ch_hover.stop(true, true).animate(initial_css, settings.slide_speed, settings.onhide());
-    });
+    
     
 })(jQuery);  
