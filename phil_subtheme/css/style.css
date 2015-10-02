@@ -27,7 +27,7 @@ time, mark, audio, video {
   background:transparent;
 }
 
-body{
+body, html{
     background: black;
 }
 
@@ -377,6 +377,7 @@ h4 a {
 #main-menu .menu {
   float: right;
   margin-bottom: 1em;
+  margin-right: 5vw;
 }
 
 #main-menu .menu a {
@@ -653,12 +654,12 @@ li.sfHover > a > .sf-sub-indicator {
 }
 
 #home-quote .content{
-    height:15vh;
 }
 
 #home-quote  h2{
     background: black;
     color:white;
+    margin-bottom: 30px;
 }
 
 #home-quote  p{
@@ -678,6 +679,7 @@ li.sfHover > a > .sf-sub-indicator {
     margin-left: 5vw;
     margin-top: 1vh;
     width: 25%;
+    margin-bottom: 30px;
     
 }
 
@@ -688,7 +690,6 @@ li.sfHover > a > .sf-sub-indicator {
 
 @media (max-width: 950px){
     #home-quote{
-        margin-bottom: 100px;
     }
     
     #home-quote #quote{float: none;
