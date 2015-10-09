@@ -27,6 +27,7 @@ time, mark, audio, video {
   background:transparent;
 }
 
+
 body, html{
     background: black;
 }
@@ -167,10 +168,10 @@ th, tr, td {
 /*Body, Common Classes &Structure
 /*-------------------------------------------*/
 body {
-  background: #EEE;
+  background: #000;
   font-size: 14px;
   line-height: 1.5em;
-  color: #333;
+  color: #FFF;
   font-family: 'Droid Sans', arial, serif;
 }
 
@@ -207,9 +208,10 @@ em {
   background: black;
   margin: 0 auto;
   border-style: none;
+  top: 55px;
 }
 #main {
-  padding: 30px 0 0;
+  padding: 0;
 }
 
 /*-------------------------------------------*
@@ -262,7 +264,7 @@ h4 a {
 /*-------------------------------------------*/
 #header {
   width: 100%;
-  position: absolute;
+  position: relative;
   margin-bottom: -50px;
   
 }
@@ -633,13 +635,12 @@ li.sfHover > a > .sf-sub-indicator {
     height: 400px;
     overflow:hidden;
     position: relative;
-    top: -5px;
 }
 
 
 @media (max-width:850px){
     #header-image img{
-        width: 850px;
+        width: 1050px;
         height:auto;
         position: absolute;
     }
@@ -667,12 +668,12 @@ li.sfHover > a > .sf-sub-indicator {
     margin: 0;
 }
 
-#home-quote #quote{
+#home-quote .quote{
     float:left;
     width: 60%;
 }
 
-#home-quote #big-button{
+#home-quote .big-button{
     border: 6px solid white;
     padding: 8px;
     float: left;
@@ -683,7 +684,7 @@ li.sfHover > a > .sf-sub-indicator {
     
 }
 
-#home-quote #big-button:hover{
+#home-quote .big-button:hover{
     background: #4E9634;
     
 }
@@ -692,13 +693,13 @@ li.sfHover > a > .sf-sub-indicator {
     #home-quote{
     }
     
-    #home-quote #quote{float: none;
+    #home-quote .quote{float: none;
         width: 90%;
         margin: 0 auto;
         float:none;
     }
     
-    #home-quote #big-button{
+    #home-quote .big-button{
         border: 10px solid white;
         padding: 8px;
         margin: 10px auto;
@@ -821,12 +822,14 @@ body.sidebar-first #post-content {
 
 .page-title {
   margin-bottom: 10px !important;
+    display: none;
 }
 #breadcrumbs {
   border-bottom: 1px solid #EEE;
   padding-bottom: 5px;
   font-size: 11px;
   margin-bottom: 20px;
+  display: none;
 }
 
 /*-------------------------------------------*
@@ -1259,6 +1262,15 @@ h3.comment-title a{
   font-size: 16px;
 }
 
+.social_block{
+    padding-left: 10px;
+}
+
+#fb-icon{
+    float:left;
+    padding-right: 5px;
+}
+
 
 /*-------------------------------------------*
 /* CSS BASED OVERLAY, OVERLAY-VIEWS
@@ -1350,6 +1362,12 @@ span.text-content span a:hover {
     color: white;
 }
 
+.ch_hover a {
+    color: #5fa128;
+    font-family: sans-serif;
+    display: block;
+}
+
 .ch_element{
     width:33.33vw;
     height:33.33vw;
@@ -1420,8 +1438,66 @@ span.text-content span a:hover {
     line-height: 3em;
 }
 
+#uobanner-container{
+    background: #004A35 !important;
+}
+
+#uobanner-logobox img{
+    height: 100%;
+    width: auto;
+}
+
 @media (max-width: 768px){
     #uobanner-logobox img{
         height: 100%;
     }
+}
+
+/*-------------------------------------------*
+/* PROJECT CONTENT TYPE FORMATTING
+/*-------------------------------------------*/
+
+.mid h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  font-size: 3rem;
+    
+}
+
+.top h2 {
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+
+
+.module {
+  width: 100%;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  float: left;
+}
+
+.writing{
+    position: relative;
+    display: inline-block;
+    background: #FFF;
+    color: black !important;
+    width: 100vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.writing p {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 2em;
 }
