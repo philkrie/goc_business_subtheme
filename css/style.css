@@ -1349,6 +1349,7 @@ span.text-content span a:hover {
     width: auto;
     height: 100%;
     overflow-x: hidden;
+    position: absolute;
 }
 
 .image > h3 {
