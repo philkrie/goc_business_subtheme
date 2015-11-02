@@ -80,16 +80,7 @@
 					if (settings.overlay_y_position=='top') { 
 						ch_hover_css.top = '33.33vw';
 					} else if (settings.overlay_y_position=='bottom') {
-                        var width = $(window).width();
-                        var height = $(window).height();
-                        if(width > 930){
-                                width = width / 3;
-                                width = width*.4;
-                                ch_hover_css.top = width + 'px';
-                            } else {
-                                ch_hover_css.top = 0 + 'px';
-                            }
-						
+						ch_hover_css.top = '0%';
 					} else {
 						ch_hover_css.top = (h/2 - overlay_h/2)+'px';
 					}
@@ -104,17 +95,7 @@
 							initial_css = { top:('-'+overlay_h+'px') }; 
 						}
 						if (settings.slide_direction=='bottom') {
-                            var width = $(window).width();
-                            var height = $(window).height();
-                            if(width > 768){
-                                width = width / 3;
-                                width = width - 55;
-                                initial_css = { top: width + 'px' };
-                            } else {
-                                height = height/4;
-                                height = height - 55;
-                                initial_css = { top: height + 'px' };
-                            }
+							initial_css = { top:'85%' };
 						}
 						if (settings.slide_direction=='left') {
 							initial_css = { left:('-'+overlay_w+'px') };
@@ -125,9 +106,9 @@
 									
 						$ch_hover.css('z-index',settings.zindex+1).css(initial_css);
 						$ch_wrapper.hover(function () {
-							$ch_hover.stop(false, false).animate({ 'top': ch_hover_css.top, 'left': ch_hover_css.left }, settings.slide_speed, settings.onshow());
+							$ch_hover.stop(true, true).animate({ 'top': ch_hover_css.top, 'left': ch_hover_css.left }, settings.slide_speed, settings.onshow());
 						}, function () {
-							$ch_hover.stop(false, false).animate(initial_css, settings.slide_speed, settings.onhide());
+							$ch_hover.stop(true, true).animate(initial_css, settings.slide_speed, settings.onhide());
 						});
 						
                         $(window).resize(function(){
@@ -141,17 +122,6 @@
                                 height = height/4;
                                 height = height - 55;
                                 initial_css = { top: height + 'px' };
-                                
-                            }
-                            
-                            width = $(window).width();
-                            height = $(window).height();
-                            if(width > 930){
-                                width = width / 3;
-                                width = width*.4;
-                                ch_hover_css.top = width + 'px';
-                            } else {
-                                ch_hover_css.top = 0 + 'px';
                             }
                             
                             $ch_hover.css('z-index',settings.zindex+1).css(initial_css);

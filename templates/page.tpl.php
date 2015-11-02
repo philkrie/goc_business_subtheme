@@ -94,6 +94,8 @@
     </nav><!-- end main-menu -->
   </header>
   
+  <?php print render($page['header']); ?>
+
   <?php print render($page['secondary_content']); ?>
 
   <div id="main">
@@ -104,15 +106,10 @@
     <?php print render($title_prefix); ?>
     <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
     <?php print render($title_suffix); ?>
-    <?php print render($page['content']); ?>
-    <div id="update-wrap">
-        <div id="updates">
-        <?php print render($page['updates']); ?>    
-        </div>
-    </div>
     <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper clearfix"><?php print render($tabs); ?></div><?php endif; ?>
     <?php print render($page['help']); ?>
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+    <?php print render($page['content']); ?>
   </section> <!-- /#main -->
   
   <?php if ($page['sidebar_first']): ?>
@@ -124,10 +121,10 @@
   <div class="clear"></div>
   
   <?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third'] || $page['footer_fourth']): ?>
-    <div id="footer-saran">
+    <div id="footer-saran" class="clearfix">
      <div id="footer-wrap">
       <?php if ($page['footer_first']): ?>
-      <div class="footer-box-left"><?php print render($page['footer_first']); ?></div>
+      <div class="footer-box"><?php print render($page['footer_first']); ?></div>
       <?php endif; ?>
       <?php if ($page['footer_second']): ?>
       <div class="footer-box"><?php print render($page['footer_second']); ?></div>
@@ -136,7 +133,7 @@
       <div class="footer-box"><?php print render($page['footer_third']); ?></div>
       <?php endif; ?>
       <?php if ($page['footer_fourth']): ?>
-      <div class="footer-box-right"><?php print render($page['footer_fourth']); ?></div>
+      <div class="footer-box remove-margin"><?php print render($page['footer_fourth']); ?></div>
       <?php endif; ?>
      </div>
     </div>
