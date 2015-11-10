@@ -27,6 +27,7 @@ time, mark, audio, video {
   background:transparent;
 }
 
+
 body, html{
     background: black;
 }
@@ -167,10 +168,10 @@ th, tr, td {
 /*Body, Common Classes &Structure
 /*-------------------------------------------*/
 body {
-  background: #EEE;
+  background: #000;
   font-size: 14px;
   line-height: 1.5em;
-  color: #333;
+  color: #FFF;
   font-family: 'Droid Sans', arial, serif;
 }
 
@@ -186,7 +187,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #B81007;
+  color: #54A128;
 }
 
 p {
@@ -207,9 +208,10 @@ em {
   background: black;
   margin: 0 auto;
   border-style: none;
+  top: 55px;
 }
 #main {
-  padding: 30px 0 0;
+  padding: 0;
 }
 
 /*-------------------------------------------*
@@ -262,7 +264,7 @@ h4 a {
 /*-------------------------------------------*/
 #header {
   width: 100%;
-  position: absolute;
+  position: relative;
   margin-bottom: -50px;
   
 }
@@ -292,7 +294,7 @@ h4 a {
 }
 
 #sitename h2 a:hover,
-#sitename h1 a:hover { color: #B81007 }
+#sitename h1 a:hover { color: #54A128 }
 #sitename p {
   font-weight: normal;
   color: #666;
@@ -308,7 +310,7 @@ h4 a {
   top: 0px;
   background-color:rgba(240,240,240,0.9);  
   z-index: 6;   
-  height: 56px;
+  height: 66px;
 }
 
 #navigation a {
@@ -382,7 +384,7 @@ h4 a {
 
 #main-menu .menu a {
   color: #666;
-  padding: 1.5em 15px;
+  padding: 1.8em 15px;
   text-decoration: none;
   margin-top: 2px;
 }
@@ -445,10 +447,9 @@ li.sfHover {
 .first.leaf > a{
     display: inline-block;
     text-indent: -9999em;
-    background-image: url("../GO_G_Small2.png");
-    background-repeat: no-repeat;
+    background: url("../GO_G_Small2.png") no-repeat center;
     width: 45px;
-    margin-top: 2px;
+    margin-top: 6px;
 }
 
 .first.leaf > a:hover,
@@ -456,8 +457,8 @@ li.sfHover {
 .first.leaf> a:active,
 .first.leaf > a.active{
     background: transparent !important;
-    background-image: url("../GO_G_Small2.png") !important;
-    background-repeat: no-repeat !important;    
+    background: url("../GO_G_Small2.png") no-repeat center !important;
+
 }
 
 .sf-sub-indicator {
@@ -577,9 +578,11 @@ li.sfHover > a > .sf-sub-indicator {
 
 .footer-box-left {
   float: left;
-  width: 25vw;
+  width: 25%;
   background: black;
   color:white;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
 }
 
@@ -589,6 +592,7 @@ li.sfHover > a > .sf-sub-indicator {
   background: black;
     color:white;
     margin-bottom: 10px;
+    margin-top: 10px;
 
 }
 
@@ -633,13 +637,12 @@ li.sfHover > a > .sf-sub-indicator {
     height: 400px;
     overflow:hidden;
     position: relative;
-    top: -5px;
 }
 
 
-@media (max-width:850px){
+@media (max-width:1000px){
     #header-image img{
-        width: 850px;
+        width: 1050px;
         height:auto;
         position: absolute;
     }
@@ -667,46 +670,28 @@ li.sfHover > a > .sf-sub-indicator {
     margin: 0;
 }
 
-#home-quote #quote{
-    float:left;
-    width: 60%;
-}
 
-#home-quote #big-button{
-    border: 6px solid white;
-    padding: 8px;
-    float: left;
-    margin-left: 5vw;
-    margin-top: 1vh;
-    width: 25%;
-    margin-bottom: 30px;
-    
-}
-
-#home-quote #big-button:hover{
+#home-quote .big-button:hover{
     background: #4E9634;
     
 }
 
-@media (max-width: 950px){
-    #home-quote{
-    }
-    
-    #home-quote #quote{float: none;
-        width: 90%;
-        margin: 0 auto;
-        float:none;
-    }
-    
-    #home-quote #big-button{
-        border: 10px solid white;
-        padding: 8px;
-        margin: 10px auto;
-        width: 50%;
-        float:none;
-    }
 
+#home-quote .quote{float: none;
+    width: 90%;
+    margin: 0 auto;
+    float:none;
 }
+    
+#home-quote .big-button{
+    border: 10px solid white;
+    padding: 8px;
+    margin: 10px auto;
+    width: 50%;
+    float:none;
+}
+
+
 
 .main_view {
   float: left;
@@ -821,12 +806,14 @@ body.sidebar-first #post-content {
 
 .page-title {
   margin-bottom: 10px !important;
+    display: none;
 }
 #breadcrumbs {
   border-bottom: 1px solid #EEE;
   padding-bottom: 5px;
   font-size: 11px;
   margin-bottom: 20px;
+  display: none;
 }
 
 /*-------------------------------------------*
@@ -891,7 +878,7 @@ body.sidebar-first #post-content {
 }
 
 .links li a:hover {
-  color: #B81007;
+  color: #54A128;
 }
 
 li a.active{color:white; text-decoration: underline;}
@@ -951,8 +938,8 @@ li a.active{color:white; text-decoration: underline;}
   -moz-transition: all 0.2s ease-in-out 0s;
   border-radius: 5px;
   cursor: pointer;
-  background: none repeat scroll 0 0 #B81007;
-  border: 1px solid #9D4D2C;
+  background: none repeat scroll 0 0 #5fa128;;
+  border: 1px solid #5fa128;
   color: #fff;
   padding: 4px 6px;
   text-shadow: 1px 1px 1px #300033;
@@ -962,7 +949,7 @@ li a.active{color:white; text-decoration: underline;}
 }
 
 .form-submit:hover {
-  background: none repeat scroll 0 0 #CF5240;
+  background: none repeat scroll 0 0 #5fa128;;
 }
 
 input.form-checkbox, input.form-radio {
@@ -1259,6 +1246,15 @@ h3.comment-title a{
   font-size: 16px;
 }
 
+.social_block{
+    padding-left: 10px;
+}
+
+#fb-icon{
+    float:left;
+    padding-right: 5px;
+}
+
 
 /*-------------------------------------------*
 /* CSS BASED OVERLAY, OVERLAY-VIEWS
@@ -1322,20 +1318,23 @@ span.text-content span a:hover {
 /* JQUERY CONTENT HOVER OVERLAYS
 /*-------------------------------------------*/
 
+
 .image{
-    width: 33.33vw;
-    height: 33.33vw;
+    width: 33.333333%;
+    height: 0;
+    padding-bottom: 33.333333%;
     position: relative;
 }
 
 .image img {
     width: auto;
-    height: 33.33vw;
+    height: 100%;
     overflow-x: hidden;
+    position: absolute;
 }
 
 .image > h3 {
-    width: 33.33vw;
+    width: 33.333333%;
     height: 20px;
     color: white;
     top: 30px;
@@ -1345,35 +1344,45 @@ span.text-content span a:hover {
 
 
 .image > h3 a{
-    width: 33.33vw;
+    width: 33.333333%;
     height: 20px;
     color: white;
 }
 
+.ch_hover a {
+    color: #5fa128;
+    font-family: sans-serif;
+    display: block;
+}
+
 .ch_element{
-    width:33.33vw;
-    height:33.33vw;
+    width:33.333333%;
+    height:0;
+    padding-bottom: 33.333333%;
     position:relative; 
     overflow:hidden;
 }
 
 .ch_wrapper{
-    width:33.33vw;
-    height:33.33vw;
+    width:100%;
+    height:0;
+    padding-bottom: 100%;
     position:relative; 
     overflow:hidden;
 }
 
 .ch_normal{
-    width:33.33vw;
-    height:33.33vw;
+    width:100%;
+    height:0;
+    padding-bottom: 100%;
     position:absolute;
     z-index:2 
 }
 
 .ch_hover{
-    width:33.33vw;
-    height:33.33vw;
+    width:100%;
+    height:0;
+    padding-bottom: 100%;
     position:absolute;
     z-index:1;
 }
@@ -1382,14 +1391,23 @@ span.text-content span a:hover {
 
 @media(max-width: 768px){
     .image img {
-        width: 100vw;
+        width: 100%;
         height: auto;
         overflow-y: hidden;
     }
     
     .ch_wrapper, .ch_normal, .ch_hover, .image{
-        width: 100vw;
-        height: 25vh;
+        width: 100%;
+        height: 0;
+        padding-bottom: 25%;
+    }
+    
+    .ch_hover{
+        top: 0% !important;
+    }
+    
+    .ch_hover p{
+        display: none;
     }
 }
 
@@ -1420,8 +1438,143 @@ span.text-content span a:hover {
     line-height: 3em;
 }
 
+#uobanner-container{
+    background: #004A35 !important;
+}
+
+#uobanner-logobox img{
+    height: 100%;
+    width: auto;
+}
+
 @media (max-width: 768px){
     #uobanner-logobox img{
         height: 100%;
     }
+}
+
+/*-------------------------------------------*
+/* PROJECT CONTENT TYPE FORMATTING
+/*-------------------------------------------*/
+
+.mid h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  font-size: 3rem;
+}
+
+.top h2 {
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+
+
+.module {
+  width: 100%;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  float: left;
+}
+
+.writing{
+    position: relative;
+    display: inline-block;
+    background: #FFF;
+    color: black !important;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.writing p {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+#partners {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    color: black;
+}
+
+/*-------------------------------------------*
+/* UPDATES VIEW FORMATTING
+/*-------------------------------------------*/
+#update-wrap{
+    width: 100%;
+    background: #FFF;
+}
+
+#update-wrap .views-field-field-image > div.field-content{
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+
+#updates{
+    background: #FFF;
+    color: black;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#updates h2{
+    color: black;
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+/*-------------------------------------------*
+/* BASIC PAGE FORMATTING
+/*-------------------------------------------*/
+
+
+.basic{
+    padding-top: 66px;
+}
+
+.basic h2{
+    margin-left: 10%;
+}
+
+@media(max-width: 768px){
+   .basic{
+        padding-top: 112px;
+   } 
+}
+
+/*-------------------------------------------*
+/* CONTACT PAGE FORMATTING
+/*-------------------------------------------*/
+
+.form-wrap{
+    position: relative;
+    display: inline-block;
+    background: #FFF;
+    color: black !important;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+}
+
+.form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.node-webform > .form-item{
+    display: none;
 }
