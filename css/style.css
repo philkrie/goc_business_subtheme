@@ -1474,7 +1474,33 @@ span.text-content span a:hover {
   padding: 20px;
 }
 
+.writing h1 {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 20px;
+}
 
+.writing .proj-img{
+    width: 20%;
+    margin-left: 10%;
+    float:left;
+    margin-top: 12px;
+}
+
+.writing .proj-info{
+    width: 60%;
+    margin-right: 10%;
+    float: right;
+}
+
+.writing .proj-info{
+    width: 60%;
+    margin-right: 10%;
+    float: right;
+}
 
 .module {
   width: 100%;
@@ -1495,7 +1521,7 @@ span.text-content span a:hover {
 }
 
 
-.writing p {
+.writing > p {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2em;
