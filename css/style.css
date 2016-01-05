@@ -707,6 +707,14 @@ li.sfHover > a > .sf-sub-indicator {
     margin: 10px auto;
     width: 50%;
     float:none;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
 }
 
 
@@ -1466,7 +1474,7 @@ span.text-content span a:hover {
 /* PROJECT CONTENT TYPE FORMATTING
 /*-------------------------------------------*/
 
-.block.block-views.contextual-links-region>h2{
+.block.block-views> h2 {
   display: none;
 }
 
