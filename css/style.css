@@ -29,8 +29,89 @@ time, mark, audio, video {
 
 
 body, html{
-    background: black;
+    -webkit-animation: fadeIn 500ms ease-in;
+  -moz-animation: fadeIn 500ms ease-in;
+  animation: fadeIn 500ms ease-in;
+
 }
+
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  from {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+:not(#header-image *) {
+ 
+}
+
 
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
@@ -449,19 +530,13 @@ li.sfHover {
 }
 
 .first.leaf > a{
-    display: inline-block;
-    text-indent: -9999em;
-    background: url("../GO_G_Small2.png") no-repeat center;
-    width: 45px;
-    margin-top: 6px;
+    
 }
 
 .first.leaf > a:hover,
 .first.leaf> a:focus,
 .first.leaf> a:active,
 .first.leaf > a.active{
-    background: transparent !important;
-    background: url("../GO_G_Small2.png") no-repeat center !important;
 
 }
 
@@ -558,7 +633,7 @@ li.sfHover > a > .sf-sub-indicator {
 /* Footer
 /*-------------------------------------------*/
 #footer-wrap{
-	padding-top: 40px;
+	 padding-top: 40px;
     background:black;
     max-width: 1200px;
     margin: 0 auto;
@@ -576,32 +651,24 @@ li.sfHover > a > .sf-sub-indicator {
 }
 
 .footer-box {
-  float: left;
-  width: 215px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-top: 40px;
+  padding-bottom: 80px;
   background: black;
+  text-align: center;
+  margin-top: 5;
+  background: url(/sites/all/themes/phil_subtheme/GO_G_Small2.png) center no-repeat;
+  background-position: 50% 100%;
 }
 
-.footer-box-left {
-  float: left;
-  width: 25%;
-  background: black;
-  color:white;
-    margin-bottom: 10px;
-    margin-top: 10px;
-
+.footer-box a{
+  color: #bbb;
 }
 
-.footer-box-right {
-  float: right;
-  width: 215px;
-  background: black;
-    color:white;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    text-align: right;
-
+.footer-box a:hover{
+  color: #fdcd07;
 }
 
 .language-switcher-locale-url{
@@ -628,20 +695,22 @@ li.sfHover > a > .sf-sub-indicator {
 /* Front-page Slider 
 /*-------------------------------------------*/
 #header-image img{
-    position:absolute;
+    position: absolute;
     width: 100%;
-    height:auto;
+    height: auto;
+    bottom: -90px;
 }
 
 #header-image .gabon_logo img{
-    position:absolute;
-    margin:0;
-    left: 50%;
+    position: relative;
+    margin: 0 auto;
+    margin-left: 50%;
     opacity: .7;
-    margin-right:50%;
-    transform: translate(-50%, 70%);
+    margin-right: 50%;
+    transform: translate(-50%);
     height: 200px;
     width: auto;
+    bottom: -130px;
 }
 
 #header-image{
@@ -705,7 +774,7 @@ li.sfHover > a > .sf-sub-indicator {
     border: 2px solid white;
     padding: 8px;
     margin: 10px auto;
-    width: 50%;
+    width: 30%;
     float:none;
     -webkit-transition-property: all;
     -moz-transition-property: all;
@@ -715,6 +784,12 @@ li.sfHover > a > .sf-sub-indicator {
     -moz-transition-duration: 0.2s;
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
+}
+
+@media(max-width: 750px){
+  #home-quote .big-button{
+    width: 80%;
+  }
 }
 
 
@@ -1347,6 +1422,7 @@ span.text-content span a:hover {
     height: 0;
     padding-bottom: 33.333333%;
     position: relative;
+    cursor: pointer;
 }
 
 .image img {
@@ -1392,6 +1468,8 @@ span.text-content span a:hover {
     padding-bottom: 100%;
     position:relative; 
     overflow:hidden;
+    cursor: pointer;
+
 }
 
 .ch_normal{
@@ -1417,12 +1495,16 @@ span.text-content span a:hover {
         width: 100%;
         height: auto;
         overflow-y: hidden;
+        cursor: pointer;
     }
+
+
     
     .ch_wrapper, .ch_normal, .ch_hover, .image{
         width: 100%;
         height: 0;
         padding-bottom: 25%;
+        cursor: pointer;
     }
     
     .ch_hover{
@@ -1439,10 +1521,10 @@ span.text-content span a:hover {
 }
 
 
-.contenthover { padding:20px 20px 10px 20px; }
-.contenthover, .contenthover h3 a, contenthover a { color:#FFF; }
-.contenthover h3, .contenthover p { margin:0 0 10px 0; line-height:1.4em; padding:0;}
-.contenthover h3{text-transform: uppercase}
+.contenthover { padding:13px 20px 10px 20px;}
+.contenthover, .contenthover h1 a, contenthover a { color:#FFF; }
+.contenthover h1, .contenthover p { margin:0 0 10px 0; line-height:1.4em; padding:0;}
+.contenthover h1{text-transform: uppercase}
 .contenthover a.mybutton { display:block; float:left; padding:5px 10px; background:#3c9632; color:#fff; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
 .contenthover a.mybutton:hover { background:#34742d }
 
@@ -1496,32 +1578,45 @@ span.text-content span a:hover {
 }
 
 .writing h1 {
-    width: 80%;
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 40px;
+    max-width: 1200px;
 }
 
 .writing .proj-img{
     width: 20%;
-    margin-left: 10%;
     float:left;
     margin-top: 12px;
 }
 
 .writing .proj-info{
-    width: 60%;
-    margin-right: 10%;
+    width: 75%;
     float: right;
 }
 
-.writing .proj-info{
-    width: 60%;
-    margin-right: 10%;
-    float: right;
+@media(max-width: 1000px){
+  .writing .proj-info{
+      width: 65%;
+      float: right;
+  }
+}
+
+@media(max-width: 750px){
+  .writing .proj-info{
+      width: 100%;
+  }
+}
+
+.writing .proj-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
 }
 
 .module {
@@ -1545,9 +1640,15 @@ span.text-content span a:hover {
 
 
 .writing > p {
-    width: 80%;
     margin: 0 auto;
     margin-bottom: 2em;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.writing > p:first-child {
+    margin-top: 2em;
 }
 
 #partners {
@@ -1622,6 +1723,7 @@ span.text-content span a:hover {
 .form{
     width: 80%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 .node-webform > .form-item{
